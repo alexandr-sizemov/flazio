@@ -1,0 +1,77 @@
+.menu{
+  height: $menuHeight;
+  background: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: stretch;
+  .menu-element{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    a{
+      padding-top: 37px;
+      margin: 0 10px;
+      text-align: center;
+      color: $colorBase;
+      border-top: 3px solid white;
+      transition: all 0.5s ease-in;
+      &:hover{
+        border-top: 3px solid $colorAccent;
+        color: $colorAccent;
+      }
+    }
+    input.text-item{
+      width: 55px;
+    }
+    span.remove-item{
+      @include circle($colorAccent);
+      color: white;
+      background: $colorAccent;
+      font-size: 1em;
+      width: $removeSize;
+      height: $removeSize;
+      cursor: pointer;
+      text-align: center;
+      line-height: 0.5;
+      margin: 0 auto;
+      &:hover{
+        background-color: $colorAccentHover;
+      }
+    }
+  }
+  div.menu-controls{
+    order: 99;
+    padding: 10px;
+    div.add-item{
+      @include circle($colorAccent);
+      color: white;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+      clear: both;
+      background: $colorAccent;
+      font-size: 4em;
+      line-height: 0.5;
+      width: 30px;
+      height: 30px;
+      margin: 0 0 5px;
+      padding: 10px;
+      cursor: pointer;
+      &:hover{
+        background-color: white;
+        color: $colorAccentHover;
+      }
+    }
+    div.align-left,
+    div.align-right,
+    div.align-center{
+      cursor: pointer;
+      float: left;
+      width: 33%;
+    }
+    div.align-right{
+      float: right;
+    }
+
+  }
+}

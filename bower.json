@@ -1,0 +1,10 @@
+{
+  "name": "flazio",
+  "version": "0.0.0",
+  "dependencies": {
+    "underscore": "*",
+    "jquery": "*",
+    "jquery-ui": "*"
+    },
+  "devDependencies": {  }
+}

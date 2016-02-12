@@ -1,0 +1,54 @@
+@import './vars.scss';
+@import './mixin.scss';
+@import './menubuilder.scss';
+@import './animation.scss';
+
+a{ 
+  text-decoration: none;
+  color: $colorBase;
+}
+
+body{ 
+  margin: 0;
+  font-size: 14px;
+  font-family: $font;
+  background: no-repeat center center fixed;
+  background-image: url($imagePath);
+  background-size: cover;
+  .title{
+    float: left;
+    color: white;
+    line-height: 2em;
+    background: darkslategrey;
+    padding: 22px 25px;
+    margin: 0;
+  }
+  .container{
+    padding: 20px 50px;
+    .menu-box{
+      width: 100%;
+      height: $menuHeight;
+      background: rgba(255,255,255,0.5);
+    }
+
+    .text-container{
+      height: 450px;
+      display: flex;
+      flex-flow: row wrap;
+      .text-box{ 
+        margin: 20px;
+        background: rgba(255,255,255,0.5);
+        flex-grow: 1;
+      }
+      .text-box-container{
+        position: relative;
+      }
+    }
+  }
+}
+
+.hide{
+
+  transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  opacity: 0;
+}
