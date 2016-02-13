@@ -2,7 +2,7 @@ var $ = require("jquery");
 var Quill = require("quill");
 var _ = window._ =  require("lodash");
 
-var templateUrl = '/scripts/modules/textEditorBuilder/template/editor.html'
+var templateUrl = './scripts/modules/textEditorBuilder/template/editor.html'
 
 var TextEditorBuilder = function (containerId) {
 	this.linkExpression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi
