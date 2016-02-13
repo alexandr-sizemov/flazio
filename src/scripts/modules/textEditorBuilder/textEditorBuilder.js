@@ -33,13 +33,16 @@ TextEditorBuilder.prototype.loadEditor = function() {
 		this.enableLinkDetection();
 		$('#'+this.textToolbarId).addClass('hide');
 
-		$('#'+this.textBoxId).focusin(_.bind(function(){
+		$('#'+this.containerId).focusin(_.bind(function(){
 			$('#'+this.textToolbarId).removeClass('hide');
 		},this));
 
-		$('#'+this.textBoxId).focusout(_.bind(function(){
-			$('#'+this.textToolbarId).addClass('hide');
-		},this));
+		$(document).mouseup(_.bind(function (e){
+		    var container = $('#' + this.containerId);
+		    if (!container.is(e.target) && container.has(e.target).length === 0){
+		        $('#' + this.textToolbarId).addClass('hide');
+		    }
+		}, this));
 
 	},this));
 };
